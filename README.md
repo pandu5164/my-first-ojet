@@ -8,4 +8,4 @@ to run json-server(npm i -g json-server): run "json-server -w db/db.json" (after
 https://github.com/lpwj/oracleJETFirstApp
 
 ##
-npm run build creates web folder
+"npm run build" creates **web** folder
