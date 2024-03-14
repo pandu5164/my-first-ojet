@@ -1,5 +1,5 @@
 ##
-run "npm i"
+Run "npm i" to install node_modules
 
 ##
 To serve app(npm i -g @oracle/ojet-cli): run "ojet serve" command in terminal
