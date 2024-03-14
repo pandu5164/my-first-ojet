@@ -1,4 +1,7 @@
 ##
+run "npm i"
+
+##
 To serve app(npm i -g @oracle/ojet-cli): run "ojet serve" command in terminal
 
 ##
