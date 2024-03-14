@@ -1,0 +1,19 @@
+{
+  "name": "ccdemo-name-badge",
+  "version": "1.0.0",
+  "jetVersion": "^15.1.0",
+  "displayName": "A user friendly, translatable name of the component.",
+  "description": "A translatable high-level description for the component.",
+  "properties": {
+
+  },
+  "methods": {
+
+  }, 
+  "events": {
+
+  }, 
+  "slots": {
+
+  }
+}

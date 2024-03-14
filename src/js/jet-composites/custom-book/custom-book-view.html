@@ -1,0 +1,77 @@
+<!-- Book -->
+<div on-click="[[cardClick]]" class="oj-panel oj-panel-shadow-xs custom-height" :id="[[$properties.bookId]]">
+    <!-- Headers -->
+    <div
+        class="custom-height-200 oj-divider-bottom oj-divider-padding oj-flex oj-sm-align-items-center oj-sm-flex-items-initial oj-sm-justify-content-center">
+        <div class="oj-flex oj-sm-flex-items-initial oj-sm-justify-content-center">
+            <div class="oj-sm-width-full oj-flex-item oj-sm-padding-2x-horizontal">
+                <oj-avatar class="oj-flex-item" role="img" size="lg" initials="Book" src="[[$properties.src]]"
+                    aria-label="Avatar of book">
+                </oj-avatar>
+            </div>
+        </div>
+        <div class="oj-flex oj-sm-flex-items-initial oj-sm-justify-content-center">
+            <div class="oj-sm-width-full oj-flex-item oj-sm-padding-2x-horizontal">
+                <span :title="[[bookTitle]]" class="oj-flex-item oj-typography-subheading-sm oj-typography-semi-bold oj-line-clamp-1">
+                    <oj-bind-text value="[[bookTitle]]"></oj-bind-text>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Headers end -->
+
+    <!-- Description -->
+    <!-- <div class="oj-flex oj-sm-align-items-center oj-sm-flex-items-initial oj-sm-justify-content-flex-start oj-sm-padding-4x-vertical">
+        <div class="oj-flex-item">
+            <div class="oj-flex-item oj-typography-subheading-sm oj-typography-semi-bold oj-text-color-secondary">
+                <oj-bind-text value="[[$properties.author]]"></oj-bind-text>
+            </div>
+            <div class="oj-flex-item oj-typography-body-sm oj-typography-semi-bold">
+                <oj-bind-text value="[[$properties.type]]"></oj-bind-text>
+            </div>
+        </div>
+    </div> -->
+    <div
+        class="oj-sm-width-full oj-flex oj-divider-top oj-divider-padding oj-sm-align-items-center oj-sm-flex-items-initial oj-sm-justify-content-flex-start oj-sm-padding-4x-vertical">
+        <div
+            class="oj-flex oj-sm-flex-items-initial oj-sm-justify-content-space-between oj-sm-width-full oj-sm-align-items-center">
+
+            <div class="oj-flex-item oj-sm-padding-1x-start oj-sm-width-full">
+                <div class="oj-flex-item oj-typography-subheading-sm oj-typography-semi-bold oj-text-color-secondary">
+                    <oj-bind-text value="[[$properties.author]]"></oj-bind-text>
+                </div>
+                <div class="oj-flex-item oj-typography-body-sm oj-typography-semi-bold">
+                    <oj-bind-text value="[[$properties.type]]"></oj-bind-text>
+                </div>
+            </div>
+
+            <div class="oj-flex-item">
+                <oj-c-rating-gauge size="sm" value="[[$properties.rating]]" tooltip="readonly book rating" readonly
+                    color="gold" aria-label="Tooltip book rating">
+                </oj-c-rating-gauge>
+            </div> <!-- oj-sm-padding-2x-horizontal - removed this class to move either sections to corners -->
+            <div class="oj-flex-item oj-flex oj-sm-justify-centent-flex-end">
+                <oj-button :id="[[addToList]]" display="icons" class="oj-button-sm  oj-sm-padding-2x-horizontal"
+                    on-oj-action="[[handleAddToList]]">
+                    <!-- display="icons" will show only text and hide text to come next to it and it comes on hover of icon -->
+                    <!-- Icon Button -->
+                    <span slot="startIcon" :id="[['heart-'+$properties.bookId]]" :style.color="[[$properties.heartColor]]" class="oj-ux-ico-heart-s" :class="[[computeCartClassName]]"></span>
+                    <span>
+                        <oj-bind-text value="[[addToListLabel]]"></oj-bind-text>
+                    </span>
+                </oj-button>
+                <oj-button :id="[[addToCart]]" display="icons" class="oj-button-sm" chroming="callToAction"
+                    on-oj-action="[[handleAddToCart]]">
+                    <!-- display="icons" will show only text and hide text to come next to it and it comes on hover of icon -->
+                    <!-- Icon Button -->
+                    <span slot="startIcon" class="oj-ux-ico-cart-add" :class="[[computeCartClassName]]"></span>
+                    <span>
+                        <oj-bind-text value="[[addToCartLabel]]"></oj-bind-text>
+                    </span>
+                </oj-button>
+            </div> <!-- oj-sm-padding-2x-horizontal - removed this class to move either sections to corners -->
+        </div>
+    </div>
+    <!-- Description ends -->
+</div>
+<!-- Book ends -->

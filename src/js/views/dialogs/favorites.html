@@ -1,0 +1,34 @@
+
+<oj-dialog :id="[[favoriteDialogId]]" :dialog-title="[[favoriteDialogTitle]]" aria-describedby="desc" cancel-behavior="icon" initial-visibility="hide" on-oj-before-close="[[beforeFavoriteDialogClose]]">
+    <div slot="body">
+        <oj-defer>
+        <!-- <p id="desc">
+            This is the dialog content. User can change dialog resize behavior, cancel behavior and drag
+            behavior by setting attributes. Default attribute value depends on the theme.
+        </p> -->
+        <oj-select-single :id="[[inputListId]]" label-hint="[[inputListLabel]]" label-edge="inside"
+            data="[[inputListDataProvider]]" value="{{inputListValue}}">
+        </oj-select-single>
+        </oj-defer>
+    </div>
+    <div slot="footer">
+        <oj-button :id="[[favoriteDialogOkId]]" display="all" class="oj-button-sm" chroming="outlined"
+            on-oj-action="[[handleCloseDialog]]">
+            <!-- display="icons" will show only text and hide text to come next to it and it comes on hover of icon -->
+            <!-- Icon Button -->
+            <!-- <span slot="startIcon" class="oj-ux-ico-cart-add" :class="[[computeCartClassName]]"></span> -->
+            <span>
+                <oj-bind-text value="[[closeFavoriteLabel]]"></oj-bind-text>
+            </span>
+        </oj-button>
+        <oj-button :id="[[favoriteDialogOkId]]" display="all" class="oj-button-sm" chroming="callToAction"
+            on-oj-action="[[handleSaveToList]]">
+            <!-- display="icons" will show only text and hide text to come next to it and it comes on hover of icon -->
+            <!-- Icon Button -->
+            <!-- <span slot="startIcon" class="oj-ux-ico-cart-add" :class="[[computeCartClassName]]"></span> -->
+            <span>
+                <oj-bind-text value="[[saveToListLabel]]"></oj-bind-text>
+            </span>
+        </oj-button>
+    </div>
+</oj-dialog>

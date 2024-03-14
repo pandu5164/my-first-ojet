@@ -1,0 +1,25 @@
+{
+  "name": "myfirstcomponent",
+  "version": "1.0.0",
+  "description": "An Oracle JavaScript Extension Toolkit(JET) web app",
+  "dependencies": {
+    "@oracle/oraclejet": "~15.1.0",
+    "@oracle/oraclejet-core-pack": "~15.1.0",
+  },
+  "devDependencies": {
+    "@oracle/ojet-cli": "~15.1.0",
+    "docdash": "^2.0.2",
+    "extract-zip": "^1.7.0",
+    "fs-extra": "^8.1.0",
+    "glob": "7.2.0",
+    "underscore": "^1.10.2"
+  },
+  "engines": {
+    "node": ">=12.21.0"
+  },
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: No test specified \" && Exit 1",
+    "docs": "jsdoc -d docs --configure jsdocConf.json"
+  }
+}

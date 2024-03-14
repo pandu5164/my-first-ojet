@@ -1,0 +1,91 @@
+<div class="oj-hybrid-padding">
+    <h1>Customers Creation Content Area</h1>
+    <div>
+        To change the content of this section, you will make edits to the customers.html file located in the /ts/views
+        folder.
+        This is customers page.
+    </div>
+    <br />
+    <oj-validation-group :id="[[formValidationGroupId]]"> <!-- valid="{{createCustomerFormValid}}" -->
+        <oj-form-layout id="oj-form" max-columns="3" class="oj-formlayout-full-width" direction="row"
+            user-assistance-density="efficient"> <!-- "compact | efficient | reflow" -->
+            <!-- to pass dynamic attributes we need to prepend :(colon) so that knockout understands whats there in brackets and read them programmatically instead of printing directly -->
+            <oj-input-text :id="[[inputFirstNameId]]" label-hint="[[inputFirstNameLabel]]"
+                validators="[[inputFirstNameValidators]]" value="{{inputFirstNameValue}}"
+                on-raw-value-changed="[[onInputFirstNameRawValueChange]]"
+                on-value-changed="[[onInputFirstNameValueChange]]" required>
+                <!-- length.max="10" length.count-by="codeUnit" required, remove required if validations are not handled and js conditions are doing it for you -->
+            </oj-input-text>
+
+            <oj-input-text :id="[[inputLastNameId]]" label-hint="[[inputLastNameLabel]]" value="{{inputLastNameValue}}"
+                disabled="[[isInputLastNameDisabled]]" required>
+            </oj-input-text>
+
+            <oj-input-text :id="[[inputFullNameId]]" label-hint="[[inputFullNameLabel]]"
+                disabled="[[isInputFullNameDisabled]]" value="{{inputFullNameValue}}">
+            </oj-input-text>
+
+            <oj-input-date :id="[[inputBirthdayId]]" value="{{inputBirthdayValue}}" label-hint="[[inputBirthdayLabel]]"
+                autocomplete="off" min="[[inputBirthdayMinValue]]" max="[[inputBirthdayMaxValue]]"
+                messages-custom="[[inputBirthdayMessagesCustom]]"
+                on-value-changed="[[onInputBirthdayValueChange]]" required></oj-input-date>
+
+            <oj-input-number :id="[[inputAgeId]]" label-hint="[[inputAgeLabel]]" value="{{inputAgeValue}}" min="18"
+                max="100" messages-custom="[[inputAgeMessagesCustom]]" disabled>
+            </oj-input-number>
+
+            <oj-select-single :id="[[inputCountryId]]" label-hint="[[inputCountryLabel]]" label-edge="inside"
+                data="[[inputCountryDataProvider]]" value="{{inputCountryValue}}"
+                on-oj-value-action="[[onInputCountryValueChanged]]" required>
+            </oj-select-single>
+
+            <oj-select-single :id="[[inputStateId]]" label-hint="[[inputStateLabel]]" label-edge="inside"
+                data="[[inputStateDataProvider]]" value="{{inputStateValue}}" disabled="[[isInputStateDisabled]]" required>
+            </oj-select-single>
+
+            <!-- <oj-select-many :id="[[inputCountryId]]" value="{{inputCountryValue}}" label-hint="[[inputCountryLabel]]"
+                options="[[inputCountryDataProvider]]"></oj-select-many> -->
+
+            <!-- <oj-c-select-multiple
+                :id="[[inputCountryId]]"
+                item-text="label"
+                value="{{inputCountryValue}}"
+                label-hint="[[inputCountryLabel]]"
+                data="[[inputCountryDataProvider]]">
+            </oj-c-select-multiple> -->
+
+            <oj-input-number :id="[[inputWeightId]]" on-raw-value-changed="[[onInputWeightRawValueChange]]"
+                messages-custom="[[inputWeightMessagesCustom]]" step="1" label-hint="[[inputWeightLabel]]"
+                value="{{inputWeightValue}}" required>
+                </oj-input-text>
+        </oj-form-layout>
+    </oj-validation-group>
+    <div class="oj-flex oj-sm-flex-items-initial oj-sm-justify-content-flex-end">
+        <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+            <oj-c-button :id="[[resetButtonId]]" chroming="outlined" on-oj-action="[[onResetButtonClick]]"
+                label="[[resetButtonLabel]]">
+                <!-- <span slot="startIcon" class="oj-ux-ico-information"></span> -->
+                <!-- <oj-bind-text value="[[createButtonLabel]]"></oj-bind-text> -->
+            </oj-c-button>
+            <oj-c-button :id="[[createButtonId]]" chroming="callToAction" on-oj-action="[[onCreateButtonClick]]" label="[[createButtonLabel]]">
+                <!-- <span slot="startIcon" class="oj-ux-ico-information"></span> -->
+                <!-- <oj-bind-text value="[[createButtonLabel]]"></oj-bind-text> -->
+            </oj-c-button>
+        </div>
+    </div>
+
+
+
+    <div>
+        <div>
+            <oj-bind-text value="[[inputFirstNameValue]]"></oj-bind-text>
+        </div>
+        <div>
+            <oj-bind-text value="[[inputBirthdayValue]]"></oj-bind-text>
+        </div>
+    </div>
+
+    <!-- Messages -->
+    <oj-messages id="oj-messages-id" :class="[[ { 'oj-color-invert success-10': showDarkToasts() } ]]" messages="[[messagesDataProvider]]"
+        display="notification" on-oj-close="[[closeMessageHandler]]" position="[[messagesPosition]]" display-options.category="none"></oj-messages>
+</div>

@@ -1,0 +1,69 @@
+<div class="oj-hybrid-padding">
+    <h1>Dashboard Content Area</h1>
+    <div>
+        To change the content of this section, you will make edits to the dashboard.html file located in the /ts/views
+        folder.
+        This is dashboard page.
+    </div>
+    <div class="oj-panel">
+        <h5><oj-bind-text value="[[usersDemoDataLabel]]"></oj-bind-text></h5>
+        <div class="oj-flex oj-xl-justify-center-center oj-sm-margin-12x-bottom oj-panel">
+            <oj-conveyor-belt id="converyerBeltPieChartLoader" tabindex="0" class="oj-xl-12 oj-sm-12 oj-flex-item" data-oj-binding-provider="none">
+                <oj-bind-for-each data="[[modulesDataProvider]]">
+                    <template data-oj-as="item">
+                        <div :id="[[chartContainer]]" class="oj-flex-item oj-sm-padding-2x-horizontal">
+                            <oj-module config="[[item.data.module]]"></oj-module>
+                        </div>
+                    </template>
+                    <template slot="noData">
+                        <div class="oj-typography-body-md oj-typography-bold oj-sm-padding-2x-top">
+                            No Users data to display
+                        </div>
+                    </template>
+                </oj-bind-for-each>
+            </oj-conveyor-belt>
+        </div>
+    </div>
+    <!-- <oj-chart :id="[[pieChart1]]" type="pie" data="[[usersPieDataProvider]]" animation-on-display="auto" animation-on-data-change="auto" 
+    style-defaults.data-label-position="auto" selection-mode="single" selection="{{usersPieSelectionValue}}" style-defaults.selection-effect="explode"
+    legend.position="bottom" value-formats.value.converter="[[numberConverter]]">
+        <template slot="itemTemplate" data-oj-as="item">
+            <oj-chart-item value="[[item.data.value]]" group-id="[[ [item.data.group] ]]"
+            label="[[numberConverter().format(item.data.value)]]" series-id="[[item.data.series]]"></oj-chart-item>
+        </template>
+        <template slot="seriesTemplate" data-oj-as="series">
+            <oj-chart-series color="[[ pieChartColor(series) ]]"></oj-chart-series>
+        </template>
+    </oj-chart> -->
+    <!-- <div :id="[[chartContainer]]">
+        <oj-module config="[[pieChartModuleConfig]]"></oj-module>
+    </div>
+    <div :id="[[chartContainer]]">
+        <oj-module config="[[pieChart2ModuleConfig]]"></oj-module>
+    </div> -->
+    <br />
+
+    <!-- <oj-form-layout id="oj-form" max-columns="3" class="oj-formlayout-full-width" direction="row"
+        user-assistance-density="compact">
+        <oj-input-text :id=[[inputFirstNameId]] label-hint="[[inputFirstNameLabel]]" value="{{inputFirstNameValue}}" required on-value-changed="[[onInputFirstNameValueChange]]">
+        </oj-input-text>
+        
+        <oj-input-text id="input-lname" label-hint="Last Name" value="{{inputLastNameValue}}" disabled="[[isInputLastNameDisabled]]">
+        </oj-input-text>
+
+        <oj-input-text id="input-full-name" label-hint="Full Name" disabled="[[isInputFullNameDisabled]]" value="{{inputFullNameValue}}">
+        </oj-input-text>
+
+        <oj-input-number id="input-age" label-hint="Age" value="{{inputAgeValue}}" min="0" max="100" step="0">
+        </oj-input-number>
+
+        <oj-input-text id="input-weight" label-hint="Weight" value="{{inputWeightValue}}">
+        </oj-input-text>
+
+    </oj-form-layout>
+
+    <span>
+        <oj-bind-text value="[[inputFirstNameValue]]"></oj-bind-text>
+    </span> -->
+
+</div>

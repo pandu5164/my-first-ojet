@@ -1,0 +1,22 @@
+/* This file is where css selectors for the component go.
+   There will be hard coded properties and properties controlled by variables, for example
+
+   ccdemo-name-badge .ccdemo-name-badge-value-text {
+   color: var(--ccdemo-name-badge-value-text-color);
+   display: inline-block;
+	 }
+*/
+
+ccdemo-name-badge:not(.oj-complete){
+  visibility: hidden;
+}
+
+ccdemo-name-badge{
+	min-height: 50px;
+	width: 50px;
+}
+
+ccdemo-name-badge[hidden]
+{
+  display: none;
+}

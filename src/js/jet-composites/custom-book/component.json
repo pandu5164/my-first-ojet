@@ -1,0 +1,74 @@
+{
+  "name": "custom-book",
+  "description": "A book element to display the book data",
+  "displayName": "Custom book",
+  "version": "15.1.0",
+  "jetVersion": ">=15.1.0 <18.0.0",
+  "properties": {
+    "bookId": {
+      "description": "The book's Id",
+      "displayName": "Id",
+      "type": "string",
+      "required": true
+    },
+    "bookTitle": {
+      "description": "The book's title",
+      "displayName": "Title",
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "description": "The book's author",
+      "displayName": "author",
+      "type": "string"
+    },
+    "type": {
+      "description": "The book's type",
+      "displayName": "type",
+      "type": "string"
+    },
+    "heartColor": {
+      "description": "The book's heart color",
+      "displayName": "Heart Color",
+      "type": "ko.observable<string>"
+    },
+    "src": {
+      "description": "The book's img source",
+      "displayName": "Src",
+      "type": "string",
+      "required": true
+    },
+    "rating": {
+      "description": "The book's rating",
+      "displayName": "Number",
+      "type": "number"
+    },
+    "clickCallback": {
+      "description": "The book's click callback to execute",
+      "displayName": "ClickCallback",
+      "type": "function"
+    }
+  },
+  "events": {
+    "bookClick": {
+      "description": "Triggered when a book is clicked and contains the value of the clicked book.",
+      "bubbles": true,
+      "detail": {
+        "value": {
+          "description": "The id of the book.",
+          "type": "string"
+        }
+      }
+    },
+    "addedToList": {
+      "description": "Triggered when an user add book to the favorite list.",
+      "bubbles": true,
+      "detail": {
+        "value": {
+          "description": "The id of the list.",
+          "type": "string/number"
+        }
+      }
+    }
+  }
+}

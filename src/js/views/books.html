@@ -1,0 +1,55 @@
+<div class="oj-hybrid-padding">
+    <!-- <h1>Books Content Area</h1>
+    <div>
+        To change the content of this section, you will make edits to the books.html file located in the /ts/views
+        folder.
+        This is Books page.
+    </div> -->
+    <!-- <oj-label for="text-input">
+        <oj-input-text
+        id="text-input"
+        value="{{incidentInputValue}}">
+        </oj-input-text>
+    </oj-label> -->
+    <section class="books-section">
+        <oj-bind-if test="[[isLoading]]">
+            <div
+                class="oj-flex oj-sm-flex-items-initial oj-sm-justify-content-center">
+                <div class="oj-flex-item oj-sm-padding-2x-horizontal">
+                    <oj-progress-circle size="lg" value="-1"></oj-progress-circle>
+                </div>
+            </div>
+        </oj-bind-if>
+        <div class="oj-flex">
+            <oj-bind-for-each data="[[booksDataProvider]]">
+                <template data-oj-as="item">
+                    <!-- <oj-module config="[[item.data.module]]"></oj-module> -->
+                    <div tabindex="0" role="group" class="oj-sm-4 oj-lg-3 oj-flex-item oj-sm-padding-2x-horizontal oj-sm-padding-2x-vertical" aria-label="books library">
+                        <custom-book
+                            book-id="[[item.data.id]]"
+                            author="[[item.data.author]]"
+                            book-title="[[item.data.title]]"
+                            type="[[item.data.type]]"
+                            on-book-click="[[bookClick]]"
+                            on-added-to-list="[[bookAddedToList]]"
+                            rating="[[item.data.rating]]"
+                            src="[[item.data.src]]"
+                            heart-color="[[item.data.heartColor]]">
+                        </custom-book> <!-- click-callback="[[bookClick]]" -->
+                    </div>
+                </template>
+                <oj-bind-if test="[[!isLoading()]]"> <!-- [[noDataAvailable]] -->
+                    <template slot="noData">
+                        <div class="oj-typography-body-md oj-typography-bold oj-sm-padding-2x-top">
+                            No Users data to display
+                        </div>
+                    </template>
+                </oj-bind-if>
+            </oj-bind-for-each>
+        </div>
+    </section>
+</div>
+
+<!-- dialog -->
+<oj-module config="[[favoritesDialog]]"></oj-module>
+<!-- dialog ends -->

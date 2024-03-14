@@ -1,0 +1,281 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "firstName": "fname1",
+      "lastName": "l1",
+      "email": "z1@gmail.com",
+      "country": 1,
+      "state": 2,
+      "birthday": "1989-08-08"
+    },
+    {
+      "id": 2,
+      "firstName": "fname2",
+      "lastName": "l2",
+      "email": "z2@gmail.com",
+      "country": 2,
+      "state": 1,
+      "birthday": "1989-09-09"
+    },
+    {
+      "id": 3,
+      "firstName": "fname3",
+      "lastName": "l3",
+      "email": "z3@gmail.com",
+      "country": 2,
+      "state": 2,
+      "birthday": "1989-10-10"
+    },
+    {
+      "id": 4,
+      "firstName": "fname4",
+      "lastName": "l4",
+      "email": "z4@gmail.com",
+      "country": 2,
+      "state": 1,
+      "birthday": "1989-11-11"
+    },
+    {
+      "id": 5,
+      "firstName": "fname5",
+      "lastName": "l5",
+      "email": "z5@gmail.com",
+      "country": 1,
+      "state": 2,
+      "birthday": "1989-12-12"
+    },
+    {
+      "id": 6,
+      "firstName": "ewewewe",
+      "lastName": "wewewe",
+      "dob": "2006-03-02",
+      "weight": 32,
+      "country": "IN",
+      "state": "BH"
+    },
+    {
+      "id": 7,
+      "firstName": "ewewe",
+      "lastName": "wewew",
+      "dob": "2006-03-03",
+      "weight": 22,
+      "country": "IN",
+      "state": "BH"
+    }
+  ],
+  "fruits": [
+    {
+      "id": 1,
+      "name": "apple"
+    },
+    {
+      "id": 2,
+      "name": "banana"
+    }
+  ],
+  "usersCountries": [
+    {
+      "id": 0,
+      "series": "India",
+      "group": "Country",
+      "value": 45,
+      "color": "#285f93"
+    },
+    {
+      "id": 1,
+      "series": "Australia",
+      "group": "Country",
+      "value": 15,
+      "color": "#b87333"
+    },
+    {
+      "id": 2,
+      "series": "United Kingdom",
+      "group": "Country",
+      "value": 30,
+      "color": "#aacca2"
+    },
+    {
+      "id": 3,
+      "series": "United States",
+      "group": "Country",
+      "value": 9,
+      "color": "#28935c"
+    },
+    {
+      "id": 4,
+      "series": "South Africa",
+      "group": "Country",
+      "value": 1,
+      "color": "#c071d0"
+    }
+  ],
+  "usersCountByAge": [
+    {
+      "id": 0,
+      "series": "0-18",
+      "group": "Age",
+      "value": 30,
+      "color": "#285f93"
+    },
+    {
+      "id": 1,
+      "series": "19-30",
+      "group": "Age",
+      "value": 45,
+      "color": "#b87333"
+    },
+    {
+      "id": 2,
+      "series": "31-45",
+      "group": "Age",
+      "value": 15,
+      "color": "#aacca2"
+    },
+    {
+      "id": 3,
+      "series": "46-60",
+      "group": "Age",
+      "value": 5,
+      "color": "#28935c"
+    },
+    {
+      "id": 4,
+      "series": "60-75",
+      "group": "Age",
+      "value": 5,
+      "color": "#c071d0"
+    }
+  ],
+  "books": [
+    {
+      "author": "Colleen Hoover",
+      "id": "0",
+      "src": "https://rukminim2.flixcart.com/image/832/832/l13whow0/regionalbooks/v/p/q/reminders-of-him-original-imagcr6ntcphx4xz.jpeg",
+      "title": "Remainders of Him",
+      "type": "Paperback",
+      "rating": 5
+  },
+  {
+      "author": "Spiegelman Art",
+      "id": "1",
+      "src": "https://rukminim2.flixcart.com/image/832/832/l5jxt3k0/book/c/n/v/maus-i-a-survivor-s-tale-original-imagg6wjfvzcy63a.jpeg",
+      "title": "Maus I: A Survivor's Tale",
+      "type": "Paperback",
+      "rating": 4
+  },
+  {
+      "author": "Hepworth Amelia",
+      "id": "2",
+      "src": "https://rukminim2.flixcart.com/image/832/832/xif0q/book/z/p/y/i-love-you-to-the-moon-and-back-original-imaggerdzkzphmdy.jpeg",
+      "title": "I Love You to the Moon and Back",
+      "type": "Board book",
+      "rating": 2
+  },
+  {
+      "author": "Patterson James",
+      "id": "3",
+      "src": "https://rukminim2.flixcart.com/image/832/832/kykgb680/book/h/9/e/middle-school-it-s-a-zoo-in-here-original-imagas5dk57fwvzr.jpeg",
+      "title": "Middle School: It's a Zoo in Here!",
+      "type": "Hardcover",
+      "rating": 4
+  },
+  {
+      "author": "Colleen Hoover",
+      "id": "4",
+      "src": "https://rukminim2.flixcart.com/image/832/832/l13whow0/regionalbooks/v/p/q/reminders-of-him-original-imagcr6ntcphx4xz.jpeg",
+      "title": "Remainders of Him",
+      "type": "Paperback",
+      "rating": 1
+  },
+  {
+      "author": "Spiegelman Art",
+      "id": "5",
+      "src": "https://rukminim2.flixcart.com/image/832/832/l5jxt3k0/book/c/n/v/maus-i-a-survivor-s-tale-original-imagg6wjfvzcy63a.jpeg",
+      "title": "Maus I: A Survivor's Tale",
+      "type": "Paperback",
+      "rating": 4
+  },
+  {
+      "author": "Hepworth Amelia",
+      "id": "6",
+      "src": "https://rukminim2.flixcart.com/image/832/832/xif0q/book/z/p/y/i-love-you-to-the-moon-and-back-original-imaggerdzkzphmdy.jpeg",
+      "title": "I Love You to the Moon and Back",
+      "type": "Board book",
+      "rating": 2
+  },
+  {
+      "author": "Patterson James",
+      "id": "7",
+      "src": "https://rukminim2.flixcart.com/image/832/832/kykgb680/book/h/9/e/middle-school-it-s-a-zoo-in-here-original-imagas5dk57fwvzr.jpeg",
+      "title": "Middle School: It's a Zoo in Here!",
+      "type": "Hardcover",
+      "rating": 5
+  },
+  {
+      "author": "Colleen Hoover",
+      "id": "8",
+      "src": "https://rukminim2.flixcart.com/image/832/832/l13whow0/regionalbooks/v/p/q/reminders-of-him-original-imagcr6ntcphx4xz.jpeg",
+      "title": "Remainders of Him",
+      "type": "Paperback",
+      "rating": 2
+  },
+  {
+      "author": "Spiegelman Art",
+      "id": "9",
+      "src": "https://rukminim2.flixcart.com/image/832/832/l5jxt3k0/book/c/n/v/maus-i-a-survivor-s-tale-original-imagg6wjfvzcy63a.jpeg",
+      "title": "Maus I: A Survivor's Tale",
+      "type": "Paperback",
+      "rating": 3
+  },
+  {
+      "author": "Hepworth Amelia",
+      "id": "10",
+      "src": "https://rukminim2.flixcart.com/image/832/832/xif0q/book/z/p/y/i-love-you-to-the-moon-and-back-original-imaggerdzkzphmdy.jpeg",
+      "title": "I Love You to the Moon and Back",
+      "type": "Board book",
+      "rating": 1
+  },
+  {
+      "author": "Patterson James",
+      "id": "11",
+      "src": "https://rukminim2.flixcart.com/image/832/832/kykgb680/book/h/9/e/middle-school-it-s-a-zoo-in-here-original-imagas5dk57fwvzr.jpeg",
+      "title": "Middle School: It's a Zoo in Here!",
+      "type": "Hardcover",
+      "rating": 5
+  },
+  {
+      "author": "Colleen Hoover",
+      "id": "12",
+      "src": "https://rukminim2.flixcart.com/image/832/832/l13whow0/regionalbooks/v/p/q/reminders-of-him-original-imagcr6ntcphx4xz.jpeg",
+      "title": "Remainders of Him",
+      "type": "Paperback",
+      "rating": 2
+  },
+  {
+      "author": "Spiegelman Art",
+      "id": "13",
+      "src": "https://rukminim2.flixcart.com/image/832/832/l5jxt3k0/book/c/n/v/maus-i-a-survivor-s-tale-original-imagg6wjfvzcy63a.jpeg",
+      "title": "Maus I: A Survivor's Tale",
+      "type": "Paperback",
+      "rating": 3
+  },
+  {
+      "author": "Hepworth Amelia",
+      "id": "14",
+      "src": "https://rukminim2.flixcart.com/image/832/832/xif0q/book/z/p/y/i-love-you-to-the-moon-and-back-original-imaggerdzkzphmdy.jpeg",
+      "title": "I Love You to the Moon and Back",
+      "type": "Board book",
+      "rating": 4
+  },
+  {
+      "author": "Patterson James",
+      "id": "15",
+      "src": "https://rukminim2.flixcart.com/image/832/832/kykgb680/book/h/9/e/middle-school-it-s-a-zoo-in-here-original-imagas5dk57fwvzr.jpeg",
+      "title": "Middle School: It's a Zoo in Here!",
+      "type": "Hardcover",
+      "rating": 5
+  }
+  ]
+}

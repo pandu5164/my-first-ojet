@@ -1,0 +1,20 @@
+<div style="width:500px; height: 250px">
+    <oj-chart style="width:100%; height: 100%" :id="[[pieChart1]]" type="pie" data="[[usersPieDataProvider]]" animation-on-display="auto"
+        animation-on-data-change="auto" style-defaults.data-label-position="auto" selection-mode="single"
+        selection="{{usersPieSelectionValue}}" style-defaults.selection-effect="explode" legend.position="bottom"
+        value-formats.value.converter="[[numberConverter]]">
+        <template slot="itemTemplate" data-oj-as="item">
+            <oj-chart-item value="[[item.data.value]]" group-id="[[ [item.data.group] ]]"
+                label="[[numberConverter().format(item.data.value)]]" series-id="[[item.data.series]]"></oj-chart-item>
+            <!-- label="[[numberConverter().format(item.data.value/100)]]" -->
+        </template>
+        <template slot="seriesTemplate" data-oj-as="series">
+            <oj-chart-series color="[[ pieChartColor(series) ]]"></oj-chart-series>
+            <!-- border-color='[[ series.id == "Series 1" ? borderColor1 : null ]]'
+                border-width='[[ series.id == "Series 1" ? borderWidth1 : null ]]'
+                pattern='[[ series.id == "Series 1" ? pattern1 : null ]]'
+                pie-slice-explode='[[ series.id == "Series 1" ? explode : null ]]'
+            ></oj-chart-series> -->
+        </template>
+    </oj-chart>
+</div>
